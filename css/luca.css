@@ -1,5 +1,41 @@
+
 body {
   background-color: #52ff2f;
+}
+
+
+
+@media only screen and (min-width: 770px) {
+  div#pellicola {
+    left: 8vw;    
+    width: 10vw;
+    background-size: 10vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  div#pellicola {
+    left: 15vw;
+    right: 15vw;    
+    width: 70vw;
+    background-size: 70vw;
+  }
+}
+
+div#pellicola {
+  
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  min-height: 100%;
+
+  background-image: url(../img/pellicola.svg);
+  background-color: black;
+
+  z-index: -1;
+  
 }
 
 * {
