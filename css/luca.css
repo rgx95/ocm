@@ -22,6 +22,11 @@ a:hover {
 }
 
 
+.video-16-9 iframe {
+  width: 100.0%;
+  height: 40vw;
+}
+
 
 /********************
         custom  
@@ -50,7 +55,9 @@ a:hover {
 
 
 
-
+.sfondo-nero {
+  background-color: black !important; 
+}
 
 .pannello {
   /*display: block; */
