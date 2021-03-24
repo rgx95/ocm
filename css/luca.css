@@ -1,0 +1,71 @@
+* {
+  font-size: 1.12em;
+  font-family:'Courier New', Courier, monospace;
+
+  box-sizing: border-box; /* grid style */
+}
+
+/********************
+   grid styles start 
+*********************/
+
+[class*="col-"] {
+  float: left;
+  padding: 2em;
+}
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones only */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+.row {
+  /*padding: 2em;*/
+}
+
+.row::after {
+  content: ""; /* sets the content after the div.row element */
+  clear: both; /* not allows the floating on left and right of the div.row */
+  display: table; /* div.row acts like a table */
+}
+
+/********************
+   grid styles end 
+*********************/
+
+.pannello {
+  /*display: block; */
+
+  border: 5px black solid;
+
+  box-shadow: -5px 5px 0 0 greenyellow;
+}
+
+.margini {
+  margin: 2em;
+}
+
+.padding {
+  padding: 2em;
+}
+
+.centra-testo {
+  text-align: center;
+}
+
