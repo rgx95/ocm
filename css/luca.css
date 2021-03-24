@@ -1,3 +1,7 @@
+body {
+  background-color: #52ff2f;
+}
+
 * {
   font-size: 1.12em;
   font-family:'Courier New', Courier, monospace;
@@ -5,13 +9,92 @@
   box-sizing: border-box; /* grid style */
 }
 
+a {
+  color: black;
+  font-weight: normal;
+  text-decoration: underline dashed;
+}
+
+a:hover {
+  color: black;
+  font-weight: bold;
+  text-decoration: underline solid;
+}
+
+
+
+/********************
+        custom  
+*********************/
+
+@media only screen and (min-width: 770px) {
+  aside {
+    padding-right: 1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  * {
+    font-size: 1em;
+  }
+
+  h1 {    
+    font-size: 1em;
+  }
+
+  aside {
+    margin-bottom: 2em;
+  }
+}
+
+
+
+
+
+.pannello {
+  /*display: block; */
+
+  border: 5px black solid;
+
+  background-color: white;
+
+  box-shadow: -7px 7px 0 0 black; /*rgb(82, 255, 47);*/
+}
+
+.margini {
+  margin: 1em;
+}
+
+.margine-sotto {
+  margin-bottom: 1em;
+}
+
+.padding {
+  padding: 1em;
+}
+
+.centra {
+  text-align: center;
+}
+
+.giustifica {
+  text-align: justify;
+}
+
+/********************
+    fine custom  
+*********************/
+
+
+
 /********************
    grid styles start 
 *********************/
 
 [class*="col-"] {
   float: left;
-  padding: 2em;
+  /*padding: 1em;*/
 }
 
 /* For desktop: */
@@ -48,24 +131,4 @@
 /********************
    grid styles end 
 *********************/
-
-.pannello {
-  /*display: block; */
-
-  border: 5px black solid;
-
-  box-shadow: -5px 5px 0 0 greenyellow;
-}
-
-.margini {
-  margin: 2em;
-}
-
-.padding {
-  padding: 2em;
-}
-
-.centra-testo {
-  text-align: center;
-}
 
