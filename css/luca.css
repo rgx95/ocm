@@ -25,19 +25,9 @@ a:hover {
 .video-16-9 iframe {
   width: 100%;
   margin: auto;
+  height: calc((9/16) * (100vw - 2em));
 }
 
-@media only screen and (min-width: 770px) {
-  .video-16-9 iframe {
-    height: 55vw;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .video-16-9 iframe {
-    height: 50vw;
-  }
-}
 
 
 
