@@ -25,7 +25,7 @@ a:hover {
 .video-16-9 iframe {
   width: 100%;
   margin: auto;
-  height: calc((9/16) * (100vw - 2em));
+  height: calc(0.5625 * (100vw - 2.1em)); /* 0.5625=9/16 (da 720/1280), 0.8=576/720 */
 }
 
 
