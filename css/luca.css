@@ -24,9 +24,9 @@ a:hover {
 
 
 .video-16-9 iframe {
-  width: 99%;
-  margin: 0.5%;
+  width: 100%;
   height: 40vw;
+  margin: auto;
 }
 
 
@@ -175,41 +175,44 @@ a:hover {
     color: white;
   }
 
+
+
   /***** box *****/
   .bordo-tondo {
     border-radius: 0.25em;
+    padding: 0.125em;
   }
   .bordo-tondo-2 {
     border-radius: 0.5em;
+    padding: 0.25em;
   }
   .bordo-tondo-4 {
     border-radius: 1em;
+    padding: 0.5em;
   }
   .bordo-tondo-8 {
     border-radius: 2em;
+    padding: 1em;
   }
+
+
 
   /**** margini ****/
   .margini {
     margin: 1em;
-  }  
-
+  }
   .margine-sopra {
     margin-top: 1em;
   }
-
   .margine-sotto {
     margin-bottom: 1em;
   }
-
   .margine-destro, .margine-destra {
     margin-right: 1em;
   }
-
   .margine-sinistro, .margine-sinistra {
     margin-left: 1em;
   }
-
   .margine-sotto-sopra, .margine-sopra-sotto {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -219,6 +222,8 @@ a:hover {
     margin-right: 1em;
     margin-left: 1em;
   }
+
+
 
   /**** padding ****/
   .padding {
@@ -250,6 +255,8 @@ a:hover {
     padding-left: 1em;
     padding-right: 1em;
   }
+
+
 
   /**** allinea testo ****/
   .centra, .centro {
