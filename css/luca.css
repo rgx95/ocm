@@ -1,45 +1,10 @@
 
 body {
-  background-color: #52ff2f;
-}
-
-
-
-@media only screen and (min-width: 770px) {
-  div#pellicola {
-    left: 8vw;    
-    width: 10vw;
-    background-size: 10vw;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-
-  div#pellicola {
-    left: 15vw;
-    right: 15vw;    
-    width: 70vw;
-    background-size: 70vw;
-  }
-}
-
-div#pellicola {
-  
-  position: fixed;
-  top: 0;
-  bottom: 0;
-
-  min-height: 100%;
-
-  background-image: url(../img/pellicola.svg);
-  background-color: black;
-
-  z-index: -1;
   
 }
 
 * {
-  font-size: 1.12em;
+  /* font-size: 1em; */
   font-family:'Courier New', Courier, monospace;
 
   box-sizing: border-box; /* grid style */
@@ -59,9 +24,11 @@ a:hover {
 
 
 .video-16-9 iframe {
-  width: 100.0%;
+  width: 99%;
+  margin: 0.5%;
   height: 40vw;
 }
+
 
 
 /********************
@@ -69,7 +36,7 @@ a:hover {
 *********************/
 
 @media only screen and (min-width: 770px) {
-  aside {
+  aside.left {
     padding-right: 1em;
   }
 }
@@ -89,41 +56,15 @@ a:hover {
   }
 }
 
-
-
-.sfondo-nero {
-  background-color: black !important; 
-}
-
 .pannello {
   /*display: block; */
 
-  border: 5px black solid;
-
   background-color: white;
 
-  box-shadow: -7px 7px 0 0 black; /*rgb(82, 255, 47);*/
+  box-shadow: 0 0 3px 0 black; /*rgb(82, 255, 47);*/
 }
 
-.margini {
-  margin: 1em;
-}
 
-.margine-sotto {
-  margin-bottom: 1em;
-}
-
-.padding {
-  padding: 1em;
-}
-
-.centra {
-  text-align: center;
-}
-
-.giustifica {
-  text-align: justify;
-}
 
 /********************
     fine custom  
@@ -131,47 +72,248 @@ a:hover {
 
 
 
+
+
+
+
+
 /********************
-   grid styles start 
+  classi standard
 *********************/
 
-[class*="col-"] {
-  float: left;
-  /*padding: 1em;*/
-}
-
-/* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones only */
-  [class*="col-"] {
-    width: 100%;
+  /**** colori ****/
+  .bianco {
+    background-color: white;
+    color: black;
   }
-}
+  .grigio-chiaro {
+    background-color: hsl(0, 0%, 60%);
+    color: white;
+  }
+  .grigio {
+    background-color: hsl(0, 0%, 40%);
+    color: white;
+  }
+  .nero-chiaro, .grigio-scuro {
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+  }
+  .nero, .nero-scuro {
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+  }
+  .rosso-chiaro {
+    background-color: hsl(0, 89%, 84%);
+    color: black;
+  }
+  .rosso {
+    background-color: hsl(0, 89%, 64%);
+    color: white;
+  }
+  .rosso-scuro {
+    background-color: hsl(0, 89%, 44%);
+    color: white;
+  }
+  .verde-chiaro {
+    background-color: hsl(120, 32%, 64%);
+    color: black;
+  }
+  .verde {
+    background-color: hsl(120, 32%, 44%);
+    color: white;
+  }
+  .verde-scuro {
+    background-color: hsl(120, 32%, 24%);
+    color: white;
+  }
+  .blu-chiaro {
+    background-color: hsl(221, 80%, 66%);
+    color: black;
+  }
+  .blu {
+    background-color: hsl(221, 80%, 46%);
+    color: white;
+  }
+  .blu-scuro {
+    background-color: hsl(221, 80%, 26%);
+    color: white;
+  }
+  .giallo-chiaro {
+    background-color: hsl(61, 100%, 90%);
+    color: black;
+  }
+  .giallo {
+    background-color: hsl(61, 100%, 70%);
+    color: black;
+  }
+  .giallo-scuro {
+    background-color: hsl(61, 100%, 50%);
+    color: black;
+  }
+  .arancio-chiaro, .arancione-chiaro {
+    background-color: hsl(34, 100%, 80%);
+    color: black;
+  }
+  .arancio, .arancione {
+    background-color: hsl(34, 100%, 60%);
+    color: white;
+  }
+  .arancio-scuro, .arancione-scuro {
+    background-color: hsl(34, 100%, 40%);
+    color: white;
+  }
+  .viola-chiaro {
+    background-color: hsl(271, 100%, 75%);
+    color: black;
+  }
+  .viola {
+    background-color: hsl(271, 100%, 55%);
+    color: white;
+  }
+  .viola-scuro {
+    background-color: hsl(271, 100%, 35%);
+    color: white;
+  }
 
-.row {
-  /*padding: 2em;*/
-}
+  /***** box *****/
+  .bordo-tondo {
+    border-radius: 0.25em;
+  }
+  .bordo-tondo-2 {
+    border-radius: 0.5em;
+  }
+  .bordo-tondo-4 {
+    border-radius: 1em;
+  }
+  .bordo-tondo-8 {
+    border-radius: 2em;
+  }
 
-.row::after {
-  content: ""; /* sets the content after the div.row element */
-  clear: both; /* not allows the floating on left and right of the div.row */
-  display: table; /* div.row acts like a table */
-}
+  /**** margini ****/
+  .margini {
+    margin: 1em;
+  }  
+
+  .margine-sopra {
+    margin-top: 1em;
+  }
+
+  .margine-sotto {
+    margin-bottom: 1em;
+  }
+
+  .margine-destro, .margine-destra {
+    margin-right: 1em;
+  }
+
+  .margine-sinistro, .margine-sinistra {
+    margin-left: 1em;
+  }
+
+  .margine-sotto-sopra, .margine-sopra-sotto {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .margine-destro-sinistro, .margine-sinistro-destro, .margine-destra-sinistra, .margine-sinistra-destra {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+
+  /**** padding ****/
+  .padding {
+    padding: 1em;
+  }
+
+  .padding-sopra {
+    padding-top: 1em;
+  }
+
+  .padding-sotto {
+    padding-bottom: 1em;
+  }
+
+  .padding-destro, .padding-destra {
+    padding-right: 1em;
+  }
+
+  .padding-sinistro, .padding-sinistra {
+    padding-left: 1em;
+  }
+
+  .padding-sopra-sotto, .padding-sotto-sopra {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .padding-destra-sinistra,.padding-sinistra-destra, .padding-destro-sinistro, .padding-sinistro-destro {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  /**** allinea testo ****/
+  .centra, .centro {
+    text-align: center;
+  }
+
+  .giustifica, .giustificato {
+    text-align: justify;
+  }
+
+  .sinistra {
+    text-align: left;
+  }
+
+  .destra {
+    text-align: right;
+  }
+
+
+  /********************
+    grid styles start 
+  *********************/
+
+  [class*="col-"] {
+    float: left;
+    /*padding: 1em;*/
+  }
+
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones only */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+
+  .row {
+    /*padding: 2em;*/
+  }
+
+  .row::after {
+    content: ""; /* sets the content after the div.row element */
+    clear: both; /* not allows the floating on left and right of the div.row */
+    display: table; /* div.row acts like a table */
+  }
+
+  /********************
+    grid styles end 
+  *********************/
 
 /********************
-   grid styles end 
+ classi standard fine
 *********************/
 
