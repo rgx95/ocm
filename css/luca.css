@@ -1,3 +1,7 @@
+body {
+  background-color: white;
+}
+
 * {
   /* font-size: 1em; */
   font-family:'Courier New', Courier, monospace;
@@ -52,11 +56,7 @@ a:hover {
 }
 
 .pannello {
-  /*display: block; */
-
-  background-color: white;
-
-  box-shadow: 0 0 3px 0 black; /*rgb(82, 255, 47);*/
+  display: block;
 }
 
 
@@ -121,6 +121,18 @@ a:hover {
     background-color: hsl(120, 32%, 24%);
     color: white;
   }
+  .verde-acido-chiaro {
+    background-color: hsl(110, 100%, 69%);
+    color: black;
+  }
+  .verde-acido {
+    background-color: hsl(110, 100%, 39%);
+    color: white;
+  }
+  .verde-acido-scuro {
+    background-color: hsl(110, 100%, 19%);
+    color: white;
+  }
   .blu-chiaro {
     background-color: hsl(221, 80%, 66%);
     color: black;
@@ -173,22 +185,49 @@ a:hover {
 
 
   /***** box *****/
-  .bordo-tondo {
-    border-radius: 0.25em;
-    padding: 0.125em;
-  }
-  .bordo-tondo-2 {
-    border-radius: 0.5em;
-    padding: 0.25em;
-  }
-  .bordo-tondo-4 {
-    border-radius: 1em;
-    padding: 0.5em;
-  }
-  .bordo-tondo-8 {
-    border-radius: 2em;
-    padding: 1em;
-  }
+    /**** radius *****/
+    .bordo-tondo {
+      border-radius: 0.25em;
+      padding: 0.125em;
+    }
+    .bordo-tondo-2 {
+      border-radius: 0.5em;
+      padding: 0.25em;
+    }
+    .bordo-tondo-4 {
+      border-radius: 1em;
+      padding: 0.5em;
+    }
+    .bordo-tondo-8 {
+      border-radius: 2em;
+      padding: 1em;
+    }
+    /**** shadow ****/
+    .ombra-bianca {
+      box-shadow: 0 0 0.125em 0 white;
+    }
+    .ombra-bianca-2 {
+      box-shadow: 0 0 0.25em 0 white;
+    }
+    .ombra-nera {
+      box-shadow: 0 0 0.125em 0 black;
+    }
+    .ombra-nera-2 {
+      box-shadow: 0 0 0.25em 0 black;
+    }
+    /**** bordo ****/
+    .bordo {
+      border: 1px gray solid;
+    }
+    .bordo-2 {
+      border: 2px gray solid;
+    }
+    .bordo-4 {
+      border: 4px gray solid;
+    }
+    .bordo-8 {
+      border: 8px gray solid;
+    }
 
 
 
