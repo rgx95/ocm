@@ -301,10 +301,6 @@ a:hover {
     }
   }
 
-  .row {
-    /*padding: 2em;*/
-  }
-
   .row::after {
     content: ""; /* sets the content after the div.row element */
     clear: both; /* not allows the floating on left and right of the div.row */
