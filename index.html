@@ -26,124 +26,23 @@
 
   <meta name="theme-color" content="#52ff2f">
 
-  <style>
-    
-    div.frame {
-      background-color: hsl(0, 0%, 34%);
-      height: 100%;
-      box-sizing: border-box;
-    } 
-
-    div.content {
-      padding: 64px;
-      height: calc(100% - 4em);
-      border-radius: 1.5em;     
-      margin: 2em 1em 2em 1em; 
-      border: 2px #575757 solid;
-      background: rgb(24, 24, 24);
-      box-shadow: inset 0 0 20px 10px black;
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-
-    body {
-      background-color: black;
-      color: white;
-      text-shadow: 0 0 4px white;
-    }
-    
-    .filmleft {
-      position: fixed;   
-      left: 0px;
-      background-image: url(img/pellicola/pellicola_sx.svg);
-      width: 110px;    
-      height: 100%;
-    }
-
-    .filmright {
-      position: fixed;
-      right: 0px;      
-      background-image: url(img/pellicola/pellicola_dx.svg);
-      width: 110px;     
-      height: 100%;
-    }
-
-    .main {
-      position: fixed;
-      left: 109px;
-      right: 109px;
-      width: calc(100% - 108px * 2);
-      height: 100%;
-      background-color: #575757;
-      overflow: hidden;
-    }
-
-    :focus {
-      outline: none;
-    }
-    
-    button.scrollButton {
-      color: white;
-      text-shadow: 0 0 10px white;
-      background: none; border: 0;
-      opacity: 0.3;
-            
-    }
-
-    button.scrollButton:hover {        
-      opacity: 1;     
-      cursor: pointer;       
-      border-radius: 1em;
-      border: 3px white solid;
-      background: black;
-      box-shadow: 0 0 10px white;
-    }
-
-    /* scroll bar */
-    ::-webkit-scrollbar {
-      display: none;
-    }
-
-
-
-    button.scrollButton {
-      position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      color: white;
-      font-size: 64px;
-      text-align: center;
-      width: 1em; height: 1em;
-    }
-    
-    button#scrollUp:before {
-      content: "↑";
-      position: relative;
-      top: -0.26em;
-    }
-
-    button#scrollDown:before {
-      content: "↓";
-      position: relative;
-      top: -0.26em;
-    }
-
-  </style>
+ 
 </head>
 
 <body>
   
+  <!-- body, "film" frames structure -->
   <div style="opacity: 0.8;">
     <div class="filmleft"></div>
-    <div id="main" class="main" onwheel="checkWheel(e);">
+    <div id="main" class="main" onwheel="checkWheel(event);">
       
-      <!-- body page -->
-
+      <!-- body content divided by film-frames -->
       <div class="frame">
         <div class="content">
+           
           <h1 class="centra margine-sotto">
-            <img class="" src="img/mascotte_ciack.svg" style="width: 8vw; height: 8vw; background: white; border-radius: 1em; box-shadow: 0 0 7px white;">
-            Organismi Cinematograficamente Modificati
+            <img class="" src="img/mascotte_ciack.svg" style="vertical-align: middle; width: 8vw; height: 8vw; background: white; border-radius: 1em; box-shadow: 0 0 7px white;">
+            <span style="">Organismi Cinematograficamente Modificati</span>
           </h1>
 
           <br><br>
@@ -200,78 +99,18 @@
     <div class="filmright"></div>
   </div>
 
-
-  <button class="scrollButton" id="scrollUp" style="top: 0.65em" onclick="scrollUp()"></button>
-  
+  <!-- button to move between page frames -->
+  <button class="scrollButton" id="scrollUp" style="top: 0.65em" onclick="scrollUp()"></button>  
   <button class="scrollButton" id="scrollDown" style="bottom: 0.6em;" onclick="scrollDown()"></button>
-
-  <script>
-
-    /* allow user to scroll through mouse-wheel */
-
-    let wheel = 0;
-
-    const checkWheel = (e) => {
-      wheel += e.deltaY
-      if (wheel > 850) {
-        scrollDown()
-        wheel = 0
-      } else if (wheel < -850) {
-        scrollUp()
-        wheel = 0
-      }
-    }
-
-    
-    /* control the Frame scrolling */
-
-    $('#scrollUp').hide();
-
-    let currentFrame = 0;
-    const lastFrame = 2;
-
-    const scrollDown = () => {
-      if (++currentFrame > lastFrame) {
-        currentFrame = lastFrame;
-        return;
-      }
-
-      if (currentFrame == lastFrame) {
-        $('#scrollDown').hide()        
-      } else {
-        $('#scrollDown').show()
-        $('#scrollUp').show()
-        $('#ocm').fadeOut(500)
-      }
-
-      $('.main').animate({scrollTop: $( window ).height() * currentFrame + 32 * currentFrame },'500');
-    }
-
-    const scrollUp = () => {
-      if (--currentFrame < 0) {
-        currentFrame = 0;
-        return;
-      }
-
-      if (currentFrame == 0) {
-        $('#scrollUp').hide()
-        $('#ocm').fadeIn(500)
-      } else {
-        $('#scrollUp').show()
-        $('#scrollDown').show()
-      }
-
-      $('.main').animate({scrollTop: $( window ).height() * currentFrame + 36 * currentFrame },'500');
-    }
-
-  </script>
 
 
   <div style="position: fixed; right: 2em; bottom: 2em; width: 128px; height: 128px;  border-radius: 4em; background: white; box-shadow: 0 0 10px 10px white;">
     <img src="img/mascotte.svg" style="width: 128px; height: 128px; ">
   </div>
-  
 
+  
+  <!-- vanilla/jquery  js-script -->
+  <script src="js/main.js"></script>
 
 </body>
 
