@@ -3,11 +3,42 @@ body {
 }
 
 * {
-  font-size: 100%;
-  font-family:'Courier New', Courier, monospace;
-
+  font-size: 1vw;
+  font-family:Courier, serif;
   box-sizing: border-box; /* grid style */
 }
+
+
+
+h1, h2, h3, h4, h5, h6, p {
+  font-variant: small-caps;
+  padding: 0;
+  margin: 0;
+}
+h1{
+  font-size: 4.5em;
+}
+h2{
+  font-size: 1.90em;
+}
+h3{
+  font-size: 1.75em;
+}
+h4{
+  font-size: 1.65em;
+}
+h5{
+  font-size: 1.60em;
+}
+h6{
+  font-size: 1.55em;
+}
+p{
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+
 
 a {
   color: greenyellow;

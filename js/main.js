@@ -5,12 +5,16 @@
 
     const checkWheel = (event) => {
       wheel += event.deltaY
-      if (wheel > 650) {
-        scrollDown()
+      if (wheel > 650) {        
         wheel = 0
-      } else if (wheel < -650) {
-        scrollUp()
+        if (currentFrame != lastFrame) {
+          scrollDown()
+        }
+      } else if (wheel < -650) {        
         wheel = 0
+        if (currentFrame != 0) {          
+          scrollUp()
+        }
       }
     }
 
@@ -20,7 +24,7 @@
     $('#scrollUp').hide();
 
     let currentFrame = 0;
-    const lastFrame = 2;
+    const lastFrame = $('.main').children().length - 1;
 
     const scrollDown = () => {
       if (++currentFrame > lastFrame) {
@@ -36,7 +40,7 @@
         $('#ocm').fadeOut(500)
       }
 
-      $('.main').animate({scrollTop: $( window ).height() * currentFrame + 32 * currentFrame },'500');
+      $('.main').animate({scrollTop: $(window).height() * currentFrame + 32 * currentFrame},'500');
     }
 
     const scrollUp = () => {
@@ -53,5 +57,5 @@
         $('#scrollDown').show()
       }
 
-      $('.main').animate({scrollTop: $( window ).height() * currentFrame + 36 * currentFrame },'500');
+      $('.main').animate({scrollTop: $( window ).height() * currentFrame + 32 * currentFrame },'500');
     }
