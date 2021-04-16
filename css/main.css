@@ -66,40 +66,38 @@ div.content {
 
 
 /* navigation buttons */
-button.scrollButton {
-  color: white;
-  text-shadow: 0 0 10px white;
-  background: none; border: 0;
-  opacity: 0.3;        
+button[id*="scroll"]  {  
+  position: fixed;  
+  left: calc(50% - 32px);
+  width: 64px; height: 64px;
+  padding: 0;  
+  background: none; border: 3px transparent solid;  
+  opacity: 0.3;
 }
 
-button.scrollButton:hover {        
-  opacity: 1;     
-  cursor: pointer;       
-  border-radius: 1em;
-  border: 3px white solid;
-  background: black;
-  box-shadow: 0 0 10px white;
-}
-
-button.scrollButton {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
+button[id*="scroll"]>span {
+  position: relative;
+  top: -15px;
+  color: greenyellow;
+  text-shadow: 0 0 1px white;
   font-size: 64px;
-  text-align: center;
-  width: 1em; height: 1em;
+  text-align: center; 
 }
 
-button#scrollUp:before {
-  content: "↑";
-  position: relative;
-  top: -0.26em;
+button#scrollUp {
+  top: 33px;
 }
 
-button#scrollDown:before {
-  content: "↓";
-  position: relative;
-  top: -0.26em;
+button#scrollDown {
+  bottom: 34px;
+}
+
+button[id*="scroll"]:hover  {  
+  box-shadow: 0 0 3px greenyellow;  
+  border: 3px greenyellow solid;  
+  color: greenyellow;     
+  text-shadow: 0 0 10px greenyellow;      
+  border-radius: 32px;
+  opacity: 1;
+  cursor: pointer;  
 }
