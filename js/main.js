@@ -40,7 +40,7 @@
         $('#ocm').fadeOut(500)
       }
 
-      $('.main').animate({scrollTop: $(window).height() * currentFrame + 32 * currentFrame},'500');
+      $('.main').animate({scrollTop: $(window).height() * currentFrame + $(window).width() / 48 * currentFrame},'500');
     }
 
     const scrollUp = () => {
@@ -57,5 +57,5 @@
         $('#scrollDown').show()
       }
 
-      $('.main').animate({scrollTop: $( window ).height() * currentFrame + 32 * currentFrame },'500');
+      $('.main').animate({scrollTop: $( window ).height() * currentFrame + $(window).width() / 48 * currentFrame },'500');
     }
