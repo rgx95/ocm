@@ -22,111 +22,257 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/luca.css">
 
+  <script src="js/vendor/jquery-3.6.0.min.js"></script>
+
   <meta name="theme-color" content="#52ff2f">
+
+  <style>
+    
+    div.frame {
+      background-color: hsl(0, 0%, 34%);
+      height: 100%;
+      box-sizing: border-box;
+    } 
+
+    div.content {
+      padding: 64px;
+      height: calc(100% - 4em);
+      border-radius: 1.5em;     
+      margin: 2em 1em 2em 1em; 
+      border: 2px #575757 solid;
+      background: rgb(24, 24, 24);
+      box-shadow: inset 0 0 20px 10px black;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    body {
+      background-color: black;
+      color: white;
+      text-shadow: 0 0 4px white;
+    }
+    
+    .filmleft {
+      position: fixed;   
+      left: 0px;
+      background-image: url(img/pellicola/pellicola_sx.svg);
+      width: 110px;    
+      height: 100%;
+    }
+
+    .filmright {
+      position: fixed;
+      right: 0px;      
+      background-image: url(img/pellicola/pellicola_dx.svg);
+      width: 110px;     
+      height: 100%;
+    }
+
+    .main {
+      position: fixed;
+      left: 109px;
+      right: 109px;
+      width: calc(100% - 108px * 2);
+      height: 100%;
+      background-color: #575757;
+      overflow: hidden;
+    }
+
+    :focus {
+      outline: none;
+    }
+    
+    button.scrollButton {
+      color: white;
+      text-shadow: 0 0 10px white;
+      background: none; border: 0;
+      opacity: 0.3;
+            
+    }
+
+    button.scrollButton:hover {        
+      opacity: 1;     
+      cursor: pointer;       
+      border-radius: 1em;
+      border: 3px white solid;
+      background: black;
+      box-shadow: 0 0 10px white;
+    }
+
+    /* scroll bar */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+
+
+    button.scrollButton {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 64px;
+      text-align: center;
+      width: 1em; height: 1em;
+    }
+    
+    button#scrollUp:before {
+      content: "↑";
+      position: relative;
+      top: -0.26em;
+    }
+
+    button#scrollDown:before {
+      content: "↓";
+      position: relative;
+      top: -0.26em;
+    }
+
+  </style>
 </head>
 
 <body>
-
-  <!-- Add your site or application content here --
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script> -->
-  <header class="row padding">
-    <div class="col-12">
-
-    <div class="pannello centra">
+  
+  <div style="opacity: 0.8;">
+    <div class="filmleft"></div>
+    <div id="main" class="main" onwheel="checkWheel(e);">
       
-      <h1>
-        Organismi Cinematograficamente Modificati
-        <img src="img/mascotte_ciak.png" alt="Mascotte" style="width: 128px">        
-      </h1>
+      <!-- body page -->
 
-    </div>
-    </div>
-  </header>
-  
+      <div class="frame">
+        <div class="content">
+          <h1 class="centra margine-sotto">
+            <img class="" src="img/mascotte_ciack.svg" style="width: 8vw; height: 8vw; background: white; border-radius: 1em; box-shadow: 0 0 7px white;">
+            Organismi Cinematograficamente Modificati
+          </h1>
 
-  <section class="pellicola padding">
-
-    <section class="row">
-
-      <article class="col-12">
-        <div class="pannello margine-sotto">
-  
-          <h2>Flaminia Cicorita </h2>
-  
+          <br><br>
+          
+          <h2>Associazione artistica</h2>
           <p class="giustifica">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus augue sed nisi dignissim mattis. Integer et molestie nibh. Nullam rhoncus congue facilisis. Fusce blandit dui gravida, dictum enim non, molestie velit. Donec interdum mauris eget tellus varius porttitor. Aliquam scelerisque faucibus erat in rutrum. Nulla aliquam eu nisi sollicitudin tincidunt. Praesent bibendum pulvinar interdum.
           </p>
-  
-        </div>
-      </article>
+          <p class="giustifica">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus augue sed nisi dignissim mattis. Integer et molestie nibh. Nullam rhoncus congue facilisis. Fusce blandit dui gravida, dictum enim non, molestie velit. Donec interdum mauris eget tellus varius porttitor. Aliquam scelerisque faucibus erat in rutrum. Nulla aliquam eu nisi sollicitudin tincidunt. Praesent bibendum pulvinar interdum.
+          </p>
+          <p class="giustifica">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus augue sed nisi dignissim mattis. Integer et molestie nibh. Nullam rhoncus congue facilisis. Fusce blandit dui gravida, dictum enim non, molestie velit. Donec interdum mauris eget tellus varius porttitor. Aliquam scelerisque faucibus erat in rutrum. Nulla aliquam eu nisi sollicitudin tincidunt. Praesent bibendum pulvinar interdum.
+          </p>
+          <p class="giustifica">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus augue sed nisi dignissim mattis. Integer et molestie nibh. Nullam rhoncus congue facilisis. Fusce blandit dui gravida, dictum enim non, molestie velit. Donec interdum mauris eget tellus varius porttitor. Aliquam scelerisque faucibus erat in rutrum. Nulla aliquam eu nisi sollicitudin tincidunt. Praesent bibendum pulvinar interdum.
+          </p>
 
-      <article class="col-12">
-        <div class="pannello margine-sotto video-16-9 sfondo-nero">
-  
-          <iframe src="https://www.youtube.com/embed/zF5Ddo9JdpY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
+          <br>
+          <h2>
+            Flaminia puzza
+          </h2>
+          <p class="giustifica">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus augue sed nisi dignissim mattis. Integer et molestie nibh. Nullam rhoncus congue facilisis. Fusce blandit dui gravida, dictum enim non, molestie velit. Donec interdum mauris eget tellus varius porttitor. Aliquam scelerisque faucibus erat in rutrum. Nulla aliquam eu nisi sollicitudin tincidunt. Praesent bibendum pulvinar interdum.
+          </p>
+          <p class="giustifica">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dapibus augue sed nisi dignissim mattis. Integer et molestie nibh. Nullam rhoncus congue facilisis. Fusce blandit dui gravida, dictum enim non, molestie velit. Donec interdum mauris eget tellus varius porttitor. Aliquam scelerisque faucibus erat in rutrum. Nulla aliquam eu nisi sollicitudin tincidunt. Praesent bibendum pulvinar interdum.
+          </p>
         </div>
-      </article>
 
-      <article class="col-12">
-        <div class="pannello margine-sotto">
-  
+      </div>
+    
+      <div class="frame">
+        <div class="content">
           <h2>Luca Piplup</h2>
-  
           <p class="giustifica">
             Ut pellentesque eros erat, non molestie odio hendrerit at. Nam pellentesque, quam a consectetur interdum, ante libero facilisis nisl, ut ultricies ex risus ut diam. In posuere nec arcu id tincidunt. Nulla facilisi. Donec sit amet sem sit amet ipsum tristique sagittis. Proin lorem nunc, egestas laoreet nisi id, tempor convallis nunc. Nulla varius diam sit amet libero tincidunt dictum.
           </p>
-  
         </div>
-      </article>
 
-      <article class="col-12">
-        <div class="pannello margine-sotto video-16-9 sfondo-nero">
-  
-          <iframe src="https://www.youtube.com/embed/aR-KAldshAE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-        </div>
-      </article>
-
-      <article class="col-12">
-        <div class="pannello">
-  
-          <h2>Simone Litten</h2>
-          
+      </div>
+    
+      <div class="frame">
+        <div class="content">
+          <h2>Simone Litten</h2>          
           <p class="giustifica">
             Aenean nec iaculis mi, ac lobortis nibh. Sed sed purus ipsum. Integer sagittis est porta velit mattis aliquam. Praesent eget sem feugiat, sodales nisi quis, aliquet sem. Etiam faucibus sed ipsum a volutpat. Integer sit amet ex sem. Vestibulum pharetra urna ac orci malesuada, eget imperdiet metus pellentesque. Donec lobortis felis ex, sed ultrices est finibus vitae. Etiam dapibus eget massa sodales malesuada. Suspendisse et augue nec lorem placerat elementum in id nunc. Nullam fermentum luctus velit, eget interdum nulla rhoncus vel. Nullam ac vestibulum justo. Pellentesque faucibus ligula augue, vitae suscipit metus fermentum ut. Sed sit amet elementum quam, nec finibus odio. Quisque ante risus, faucibus eu elit in, sodales consequat dui.
           </p>
-  
         </div>
-      </article>
-    </section>
+      
+      </div>
+
+    </div>
+    <div class="filmright"></div>
+  </div>
+
+
+  <button class="scrollButton" id="scrollUp" style="top: 0.65em" onclick="scrollUp()"></button>
+  
+  <button class="scrollButton" id="scrollDown" style="bottom: 0.6em;" onclick="scrollDown()"></button>
+
+  <script>
+
+    /* allow user to scroll through mouse-wheel */
+
+    let wheel = 0;
+
+    const checkWheel = (e) => {
+      wheel += e.deltaY
+      if (wheel > 850) {
+        scrollDown()
+        wheel = 0
+      } else if (wheel < -850) {
+        scrollUp()
+        wheel = 0
+      }
+    }
 
     
-  </section>
+    /* control the Frame scrolling */
 
-  <footer class="row padding">
-    <div class="col-12">
+    $('#scrollUp').hide();
 
-    <div class="pannello centra">
-      <em>2021&copy;Luca Ruggirello</em>
-    </div>
-    </div>
-  </footer>
+    let currentFrame = 0;
+    const lastFrame = 2;
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. --
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    const scrollDown = () => {
+      if (++currentFrame > lastFrame) {
+        currentFrame = lastFrame;
+        return;
+      }
+
+      if (currentFrame == lastFrame) {
+        $('#scrollDown').hide()        
+      } else {
+        $('#scrollDown').show()
+        $('#scrollUp').show()
+        $('#ocm').fadeOut(500)
+      }
+
+      $('.main').animate({scrollTop: $( window ).height() * currentFrame + 32 * currentFrame },'500');
+    }
+
+    const scrollUp = () => {
+      if (--currentFrame < 0) {
+        currentFrame = 0;
+        return;
+      }
+
+      if (currentFrame == 0) {
+        $('#scrollUp').hide()
+        $('#ocm').fadeIn(500)
+      } else {
+        $('#scrollUp').show()
+        $('#scrollDown').show()
+      }
+
+      $('.main').animate({scrollTop: $( window ).height() * currentFrame + 36 * currentFrame },'500');
+    }
+
   </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>-->
 
 
+  <div style="position: fixed; right: 2em; bottom: 2em; width: 128px; height: 128px;  border-radius: 4em; background: white; box-shadow: 0 0 10px 10px white;">
+    <img src="img/mascotte.svg" style="width: 128px; height: 128px; ">
+  </div>
+  
 
 
-  <div class="verde" style="position: fixed; width: 100%; height: 100%;"></div>
 </body>
 
 </html>

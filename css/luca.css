@@ -10,13 +10,13 @@ body {
 }
 
 a {
-  color: black;
+  color: greenyellow;
   font-weight: normal;
   text-decoration: underline dashed;
 }
 
 a:hover {
-  color: black;
+  color: greenyellow;
   font-weight: bold;
   text-decoration: underline solid;
 }
