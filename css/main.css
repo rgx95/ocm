@@ -64,6 +64,21 @@ div.content {
   overflow-y: auto;
 }
 
+div.content:before {
+  content: " ";
+  display: block;
+}
+
+/* profile image */
+.profile-image {
+  float: right;
+  width: 10vw;
+  height: 10vw;
+  background: white;
+  border-radius: 1em;
+  box-shadow: 0 0 7px white;
+}
+
 
 /* navigation buttons */
 button[id*="scroll"]  {  
