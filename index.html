@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-justify {
+  text-align: justify;
+  text-justify: inter-character;
+}
+</style>
 <body>
 
 <!-- Navbar (sit on top) -->
@@ -21,9 +28,9 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">  
-  <iframe width="1500" height="850" src="https://www.youtube.com/embed/3PZ65s2qLTE?autoplay=1&controls=0&start=15" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+  <iframe style="width: 100vw; height: calc(100vw / 16 * 9)" src="https://www.youtube.com/embed/3PZ65s2qLTE?autoplay=1&controls=0&start=15&mute=1" title="YouTube video player" autoplay="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
   <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>OCM</b></span> <span class="w3-hide-small w3-text-light-grey">Architects</span></h1>
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>OCM</b></span> <span class="w3-hide-small w3-text-light-grey">Production</span></h1>
   </div>
 </header>
 
@@ -94,60 +101,64 @@
 
   <!-- About Section -->
   <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Chi Siamo</h3>    
-    <p>
-      Come ci racconta il nostro statuto
-    </p>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">L'Associazione</h3>    
     <div class="w3-panel w3-leftbar">
       <p><i class="fa fa-quote-right w3-xxlarge"></i><br>
       <i class="w3-serif w3-xlarge">L'associazione non ha scopo di lucro e persegue finalità
         civiche, solidaristiche e di utilità sociale, mediante lo
-        svolgimento [...] di una o più delle
-        seguenti attività di interesse generale [...]:
+        svolgimento [...] delle
+        seguenti attività [...]:
         organizzazione e gestione di attività culturali, artistiche o
-        ricreative di particolare interesse sociale [...] di promozione e diffusione della cultura [...]</i></p>
+        ricreative di particolare interesse sociale [...] di promozione e diffusione della cultura [...]</i>
+        <br>
+        <span class="w3-right">- estratto dal <b>Nostro Statuto</b> -</span>
+        </p>
     </div>
   </div>
 
   <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="John" style="width:100%">
-      <h3>Marco Valtriani</h3>
-      <p class="w3-opacity">Presidente e Fondatore</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="Jane" style="width:100%">
-      <h3>Lavinia Di Pierro</h3>
-      <p class="w3-opacity">Segretario e Vice Presidente</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">La Squadra</h3>
+    <br>
+    <div class="w3-col l1 w3-margin-bottom"></div>
+    <div class="w3-col l2 m6 w3-margin-bottom">
+      <img src="img/user.png" alt="John" style="width:100%"> 
+      <h3 class="w3-center">Marco<br>Valtriani</h3>
+      <p class="w3-opacity w3-center">Presidente e Fondatore</p>
+      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
+      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
     </div>
     <div class="w3-col l2 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="Mike" style="width:100%">
-      <h3>Flaminia Trapani</h3>
-      <p class="w3-opacity">Tesoriere</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>
+      <img src="img/user.png" alt="Jane" style="width:100%"> 
+      <h3 class="w3-center">Lavinia<br>Di Pierro</h3>
+      <p class="w3-opacity w3-center">Segretario e Vice Presidente</p>
+      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
+      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
     </div>
     <div class="w3-col l2 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="Dan" style="width:100%">
-      <h3>Barbara Li Volsi</h3>
-      <p class="w3-opacity">Consigliere</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>
+      <img src="img/user.png" alt="Mike" style="width:100%"> 
+      <h3 class="w3-center">Flaminia<br>Trapani</h3>
+      <p class="w3-opacity w3-center">Tesoriere</p>
+      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
+      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
     </div>
     <div class="w3-col l2 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="Dan" style="width:100%">
-      <h3>Zoe Maria Pisani</h3>
-      <p class="w3-opacity">Consigliere</p>
-      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
-      <p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>
+      <img src="img/user.png" alt="Dan" style="width:100%"> 
+      <h3 class="w3-center">Barbara<br>Li Volsi</h3>
+      <p class="w3-opacity w3-center">Consigliere</p>
+      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
+      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
     </div>
+    <div class="w3-col l2 m6 w3-margin-bottom">
+      <img src="img/user.png" alt="Dan" style="width:100%"> 
+      <h3 class="w3-center">Zoe Maria<br>Pisani</h3>
+      <p class="w3-opacity w3-center">Consigliere</p>
+      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
+      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
+    </div>
+    <div class="w3-col l1 w3-margin-bottom"></div>
   </div>
 
-  <!-- Contatta Section -->
+  <!-- Contatcs Section -->
   <div class="w3-container w3-padding-32" id="contact">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contattaci</h3>
     <p>Parlaci di qualche idea o progetto che vorresti realizzare!</p>
@@ -164,7 +175,16 @@
   
 <!-- Image of location/map -->
 <div class="w3-container">
-  <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sede</h3>
+  <p><em>
+    <a class="w3-hover-text-gray" href="
+    https://goo.gl/maps/4zMGuQ8geXWcNM9Z7" target="_blank">Via La Maddalena, 9<br>
+    56125 - Pisa (PI)</a>
+  </em></p>
+  <br>
+  <img src="img/map.jpg" class="w3-image" style="width:100%">
+  <br>
+  <br>
 </div>
 
 <!-- End page content -->
@@ -173,7 +193,11 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">  
-  <p><em>Web-developer Luca Ruggirello.</em> Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>
+    <em>Web developer <a class="w3-hover-text-gray" target="_blank" href="https://lucaruggirello.me">Luca Ruggirello</a></em>
+    <br>
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a>
+  </p>
 </footer>
 
 </body>
