@@ -10,6 +10,12 @@
   text-align: justify;
   text-justify: inter-character;
 }
+.fullscreen-video{
+  width: 100vw;
+  max-width: 1500px;
+  height: calc(100vw / 16 * 9);
+  max-height: calc(1500px / 16 * 9);
+}
 </style>
 <body>
 
@@ -28,7 +34,8 @@
 
 <!-- Header -->
 <header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">  
-  <iframe style="width: 100vw; height: calc(100vw / 16 * 9)" src="https://www.youtube.com/embed/3PZ65s2qLTE?autoplay=1&controls=0&start=15&mute=1" title="YouTube video player" autoplay="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+  <span class="w3-hide-large"><br><br></span>
+  <iframe class="fullscreen-video" src="https://www.youtube.com/embed/3PZ65s2qLTE?autoplay=1&controls=0&start=15&mute=1&loop=1" title="YouTube video player" autoplay="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
   <div class="w3-display-middle w3-margin-top w3-center">
     <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>OCM</b></span> <span class="w3-hide-small w3-text-light-grey">Production</span></h1>
   </div>
@@ -42,61 +49,131 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Progetti</h3>
   </div>
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">video</div>
-        <img src="img/utubefree.png" alt="video" style="width: 99%;">
+  <!-- Video slideshow-->
+
+  <div class="w3-content w3-display-container">
+
+    <div class="w3-row-padding">
+
+      <div class="w3-col m3 l3 w3-margin-bottom">
+        <button class="w3-hide-medium w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0, 'videos', 1)">&#10094;</button>      
+        <button class="w3-hide-small w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0, 'videos', 3)">&#10094;</button>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">video</div>
-        <img src="img/utubefree.png" alt="video" style="width:99%">
+
+      <div class="myVideoSlides w3-col l2 m2 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">video 1</div>
+          <img src="img/utubefree.png" alt="video" style="width:99%">
+        </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">video</div>
-        <img src="img/utubefree.png" alt="video" style="width:99%">
+      <div class="myVideoSlides w3-col l2 m2 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">video 2</div>
+          <img src="img/utubefree.png" alt="video" style="width:99%">
+        </div>
       </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">video</div>
-        <img src="img/utubefree.png" alt="video" style="width:99%">
+      <div class="myVideoSlides w3-col l2 m2 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">video 3</div>
+          <img src="img/utubefree.png" alt="video" style="width:99%">
+        </div>
       </div>
+
+      <div class="myVideoSlides w3-col l2 m2 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">video 4</div>
+          <img src="img/utubefree.png" alt="video" style="width:99%">
+        </div>
+      </div>
+
+      <div class="myVideoSlides w3-col l2 m2 w3-margin-bottom">
+        <div class="w3-display-container">
+          <div class="w3-display-topleft w3-black w3-padding">video 5</div>
+          <img src="img/utubefree.png" alt="video" style="width:99%">
+        </div>
+      </div>
+
+      <div class="myVideoSlides w3-col l2 m2 w3-margin-bottom">
+        <div class="w3-display-container" onclick="openModal()">
+          <div class="w3-display-topleft w3-black w3-padding">video 6</div>
+          <img src="img/utubefree.png" alt="video" style="width:99%">
+        </div>
+      </div>
+
     </div>
     
-  </div>
+    <div class="w3-col m3 l3 w3-margin-bottom">      
+      <button class="w3-hide-medium w3-button w3-black w3-display-right" onclick="plusDivs(1, 0, 'videos', 1)">&#10095;</button>
+      <button class="w3-hide-small w3-button w3-black w3-display-right" onclick="plusDivs(1, 0, 'videos', 3)">&#10095;</button>
+    </div>
+  </div> 
 
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">video</div>
-        <img src="img/utubefree.png" alt="video" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">video</div>
-        <img src="img/utubefree.png" alt="video" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">video</div>
-        <img src="img/utubefree.png" alt="video" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding">video</div>
-        <img src="img/utubefree.png" alt="video" style="width:99%">
-      </div>
-    </div>
+  <div id="showVideo" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <button onclick="closeModal()"
+        class="w3-button w3-display-topright w3-teal">&times;</button>
+        <iframe id="videoToShow" style="width: 100%;" src="https://www.youtube.com/embed/3PZ65s2qLTE?autoplay=1&start=50&mute=1" title="YouTube video player" autoplay="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+        <div id="player"></div>
 
-    
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '360',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+        
+        <script>
+          function closeModal() {
+            document.getElementById('showVideo').style.display='none'
+            document.getElementById('videoToShow').stopVideo()
+          }
+          function openModal() {
+            let el = document.getElementById('showVideo')
+            let video = document.getElementById('videoToShow')
+            el.style.display='block' 
+            video.style.height = el.offsetWidth / 9 * 16 + 'px'
+            video.style.maxHeight = window.screen.height / 100 * 60 + 'px'
+          }
+        </script>
+      </div>      
+    </div>
   </div>
 
   <!-- About Section -->
@@ -116,47 +193,84 @@
     </div>
   </div>
 
-  <div class="w3-row-padding w3-grayscale">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">La Squadra</h3>
-    <br>
-    <div class="w3-col l1 w3-margin-bottom"></div>
-    <div class="w3-col l2 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="John" style="width:100%"> 
-      <h3 class="w3-center">Marco<br>Valtriani</h3>
-      <p class="w3-opacity w3-center">Presidente e Fondatore</p>
-      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
-      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
+  <div class="w3-container w3-padding-32" id="about">
+    <div class="w3-row w3-grayscale">
+
+      <h3 class="w3-border-bottom w3-border-light-grey">La Squadra</h3>
+      
+      <br>
+
+      <div class="w3-col l3 m3 w3-margin-bottom">
+        <button class="w3-hide-medium w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1, 'team', 1)">&#10094;</button>
+        <button class="w3-hide-small w3-button w3-black w3-display-left" onclick="plusDivs(-1, 1, 'team', 3)">&#10094;</button>
+      </div>      
+
+      <div class="myTeamSlides w3-col l2 m2 w3-margin-bottom">
+        <img src="img/user.png" alt="Marco Valtriani" style="width:100%"> 
+        <h3 class="w3-center">Marco<br>Valtriani</h3>
+        <p class="w3-opacity w3-center">Presidente e Fondatore</p>
+      </div>
+      <div class="myTeamSlides w3-col l2 m2 w3-margin-bottom">
+        <img src="img/user.png" alt="Lavinia Di Pierro" style="width:100%"> 
+        <h3 class="w3-center">Lavinia<br>Di Pierro</h3>
+        <p class="w3-opacity w3-center">Segretario e Vice Presidente</p>
+      </div>
+      <div class="myTeamSlides w3-col l2 m2 w3-margin-bottom">
+        <img src="img/user.png" alt="Flaminia Trapani" style="width:100%"> 
+        <h3 class="w3-center">Flaminia<br>Trapani</h3>
+        <p class="w3-opacity w3-center">Tesoriere</p>
+      </div>
+      <div class="myTeamSlides w3-col l2 m2 w3-margin-bottom">
+        <img src="img/user.png" alt="Barbara Li Volsi" style="width:100%"> 
+        <h3 class="w3-center">Barbara<br>Li Volsi</h3>
+        <p class="w3-opacity w3-center">Consigliere</p>
+      </div>
+      <div class="myTeamSlides w3-col l2 m2 w3-margin-bottom">
+        <img src="img/user.png" alt="Zoe Maria Pisani" style="width:100%"> 
+        <h3 class="w3-center">Zoe Maria<br>Pisani</h3>
+        <p class="w3-opacity w3-center">Consigliere</p>
+        <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
+        <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
+      </div>
+
+      <div class="w3-col l3 m3 w3-margin-bottom"></div>
+        <button class="w3-hide-medium w3-button w3-black w3-display-right" onclick="plusDivs(1, 1, 'team', 1, this)">&#10095;</button>
+        <button class="w3-hide-small w3-button w3-black w3-display-right" onclick="plusDivs(1, 1, 'team', 3, this)">&#10095;</button>
+      </div>
     </div>
-    <div class="w3-col l2 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="Jane" style="width:100%"> 
-      <h3 class="w3-center">Lavinia<br>Di Pierro</h3>
-      <p class="w3-opacity w3-center">Segretario e Vice Presidente</p>
-      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
-      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
-    </div>
-    <div class="w3-col l2 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="Mike" style="width:100%"> 
-      <h3 class="w3-center">Flaminia<br>Trapani</h3>
-      <p class="w3-opacity w3-center">Tesoriere</p>
-      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
-      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
-    </div>
-    <div class="w3-col l2 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="Dan" style="width:100%"> 
-      <h3 class="w3-center">Barbara<br>Li Volsi</h3>
-      <p class="w3-opacity w3-center">Consigliere</p>
-      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
-      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
-    </div>
-    <div class="w3-col l2 m6 w3-margin-bottom">
-      <img src="img/user.png" alt="Dan" style="width:100%"> 
-      <h3 class="w3-center">Zoe Maria<br>Pisani</h3>
-      <p class="w3-opacity w3-center">Consigliere</p>
-      <!--<p class="w3-justify">Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>-->
-      <!--<p><button class="w3-button w3-light-grey w3-block">Contatta</button></p>-->
-    </div>
-    <div class="w3-col l1 w3-margin-bottom"></div>
+
   </div>
+
+  <script>        
+    
+    var slideIndex = [1, 1];
+    showDivs(slideIndex[0], 'videos', 0, window.screen.width > 600 ? 3 : 1);    
+    showDivs(slideIndex[1], 'team', 1, window.screen.width > 600 ? 3 : 1);
+
+    function plusDivs(n, idx, el, numeltoshow, btn) {
+      showDivs(slideIndex[idx] += n, el, idx, numeltoshow);
+    }
+
+    function showDivs(n, el, idx, numElementsToShow=1) {
+      this.videos = document.getElementsByClassName("myVideoSlides");
+      this.team = document.getElementsByClassName("myTeamSlides");
+
+      console.log(slideIndex[idx])
+
+      if (slideIndex[idx]<1) {slideIndex[idx]=1}
+      if (slideIndex[idx]>this[el].length - (numElementsToShow - 1)) {slideIndex[idx] = this[el].length  - (numElementsToShow - 1)}
+
+      for (let i = 0; i < this[el].length; i++) {
+        this[el][i].style.display = "none";  
+      }
+
+      for(let i = 0; i < numElementsToShow; i++) {
+        let tmp = slideIndex[idx] - 1 + i
+        console.log(slideIndex[idx])
+        this[el][tmp].style.display = "block";
+      }
+    }
+    </script>
 
   <!-- Contatcs Section -->
   <div class="w3-container w3-padding-32" id="contact">
@@ -173,19 +287,19 @@
     </form>
   </div>
   
-<!-- Image of location/map -->
-<div class="w3-container">
-  <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sede</h3>
-  <p><em>
-    <a class="w3-hover-text-gray" href="
-    https://goo.gl/maps/4zMGuQ8geXWcNM9Z7" target="_blank">Via La Maddalena, 9<br>
-    56125 - Pisa (PI)</a>
-  </em></p>
-  <br>
-  <img src="img/map.jpg" class="w3-image" style="width:100%">
-  <br>
-  <br>
-</div>
+  <!-- Image of location/map -->
+  <div class="w3-container">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sede</h3>
+    <p><em>
+      <a class="w3-hover-text-gray" href="
+      https://goo.gl/maps/4zMGuQ8geXWcNM9Z7" target="_blank">Via La Maddalena, 9<br>
+      56125 - Pisa (PI)</a>
+    </em></p>
+    <br>
+    <img src="img/map.jpg" class="w3-image" style="width:100%">
+    <br>
+    <br>
+  </div>
 
 <!-- End page content -->
 </div>
